@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 
 // const [text, setText] = useState("")
@@ -8,6 +10,9 @@ const HeaderMenu = () => {
 
     const handleChange = (e) => {
         setText(e.target.value)
+    }
+    const handleClick = () => {
+        <Link to="\register" />
     }
 
 
@@ -30,7 +35,8 @@ const HeaderMenu = () => {
                 </div>
             </div>
             <div class="accounts">
-                <a href=""> <i class='bx bxs-user'></i> <span>Account</span></a>
+                <a href=""> <i class='bx bxs-user'></i> <span onClick={handleClick}>Account</span></a>
+
 
             </div>
         </div>
