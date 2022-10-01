@@ -12,7 +12,7 @@ const HeaderMenu = () => {
         setText(e.target.value)
     }
     const handleClick = () => {
-        <Link to="\register" />
+        window.location.href = "./register.js"
     }
 
 
