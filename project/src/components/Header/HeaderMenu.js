@@ -11,9 +11,9 @@ const HeaderMenu = () => {
     const handleChange = (e) => {
         setText(e.target.value)
     }
-    const handleClick = () => {
-        window.location.href = "./register.js"
-    }
+    // const handleClick = () => {
+    //     window.location.href = "./register.js"
+    // }
 
 
     return (
@@ -35,11 +35,13 @@ const HeaderMenu = () => {
                 </div>
             </div>
             <div class="accounts">
-                <a href=""> <i class='bx bxs-user'></i> <span onClick={handleClick}>Account</span></a>
-
-
+                <a href="" target="_blank"> <i class='bx bxs-user'></i> <span>Register</span></a>
+            </div>
+            <div class="accounts">
+                <a href="" target="_blank"> <span><img style={{ height: "40px", }} src="https://static.vecteezy.com/system/resources/previews/000/498/118/original/vector-shopping-cart-icon-design.jpg" /></span></a>
             </div>
         </div>
+
     )
 }
 export default HeaderMenu;    
