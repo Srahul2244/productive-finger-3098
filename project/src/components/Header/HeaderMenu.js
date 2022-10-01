@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import Register from "../Register";
 
 
 
@@ -11,37 +12,57 @@ const HeaderMenu = () => {
     const handleChange = (e) => {
         setText(e.target.value)
     }
-    // const handleClick = () => {
-    //     window.location.href = "./register.js"
-    // }
+
+    const handleClick = () => {
+        <NavLink to="/register" />
+    }
 
 
     return (
-        <div class="header_container" style={{ marginTop: "7px" }}>
-            <div class="header_logo">
-                <img src="./assets/images/nykaa_logo_pink.svg" alt="nykaa logo" srcset="" />
-            </div>
-            <div class="header_nav">
-                <a>CATEGORIES</a>
-                <a>BRANDS</a>
-                <a>NYKAA FASHION</a>
-                <a>BEAUTY ADVICE</a>
-                <a>NYKAA NETWORK</a>
-            </div>
-            <div class="search_box media_input">
-                <div class="input_box">
-                    <i class="bx bx-search"></i>
-                    <input placeholder="Search for Products, Brands etc " name="text" value={text} onChange={handleChange} />
-                </div>
-            </div>
-            <div class="accounts">
-                <a href="" target="_blank"> <i class='bx bxs-user'></i> <span>Register</span></a>
-            </div>
-            <div class="accounts">
-                <a href="" target="_blank"> <span><img style={{ height: "40px", }} src="https://static.vecteezy.com/system/resources/previews/000/498/118/original/vector-shopping-cart-icon-design.jpg" /></span></a>
-            </div>
-        </div>
-
+        React.createElement("div", {
+            class: "header_container",
+            style: {
+                marginTop: "7px"
+            }
+        }, React.createElement("div", {
+            class: "header_logo"
+        }, React.createElement("img", {
+            src: "./assets/images/nykaa_logo_pink.svg",
+            alt: "nykaa logo",
+            srcset: ""
+        })), React.createElement("div", {
+            class: "header_nav"
+        }, React.createElement("a", null, "CATEGORIES"), React.createElement("a", null, "BRANDS"), React.createElement("a", null, "NYKAA FASHION"), React.createElement("a", null, "BEAUTY ADVICE"), React.createElement("a", null, "NYKAA NETWORK")), React.createElement("div", {
+            class: "search_box media_input"
+        }, React.createElement("div", {
+            class: "input_box"
+        }, React.createElement("i", {
+            class: "bx bx-search"
+        }), React.createElement("input", {
+            placeholder: "Search for Products, Brands etc ",
+            name: "text",
+            value: text,
+            onChange: handleChange
+        }))), React.createElement("div", {
+            class: "accounts"
+        }, React.createElement("a", {
+            href: "/register.js",
+            target: "_blank"
+        }, " ", React.createElement("i", {
+            class: "bx bxs-user"
+        }), " ", React.createElement("span", {
+            onClick: handleClick
+        }, "Register"))), React.createElement("div", {
+            class: "accounts"
+        }, React.createElement("a", {
+            href: "",
+            target: "_blank"
+        }, " ", React.createElement("span", null, React.createElement("img", {
+            style: {
+                height: "40px"
+            },
+            src: "https://static.vecteezy.com/system/resources/previews/000/498/118/original/vector-shopping-cart-icon-design.jpg"
+        })))))
     )
 }
 export default HeaderMenu;    
